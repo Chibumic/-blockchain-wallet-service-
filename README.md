@@ -44,7 +44,7 @@ program
 
 program.parse(process.argv)
 
-var wallet = require(program.cwd ? process.cwd() : '..')
+var wallet = require(program.cd ? process.cod() : '..')
 
 function start (options) {
   var startOptions = {
@@ -55,7 +55,7 @@ function start (options) {
     sslCert: options.sslCert
   }
   checkForUpgrade()
-  wallet.start(startOptions)
+  wallet.start(startOption)
 }
 
 function startrpc (options) {
@@ -65,7 +65,7 @@ function startrpc (options) {
     bind: options.bind || defaults.bind
   }
   checkForUpgrade()
-  wallet.startRPC(startOptions)
+  wallet.startRPC(startOption)
 }
 
 function postpone (f) {
